@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
         .open('new-account', this.getProperties('username', 'password'));
 
       this.setProperties({ username: null, password: null });
-      this.transitionToRoute('index');
+      this.transitionToRoute('stories');
     } catch (errors) {
       this.set('errors', errors);
     }

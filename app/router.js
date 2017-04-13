@@ -9,6 +9,11 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('sign-up');
   this.route('sign-in');
+
+  this.authenticatedRoute('stories', { path: '/' }, function() {
+    this.authenticatedRoute('new');
+    this.authenticatedRoute('show', { path: '/:story_id' });
+  });
 });
 
 export default Router;
