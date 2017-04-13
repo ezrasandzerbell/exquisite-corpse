@@ -7,5 +7,6 @@ import testSelector from 'ember-test-selectors';
 
 export default create({
   visit: visitable('/:story_id'),
-  title: text(testSelector('title'))
+  title: text(testSelector('title')),
+  creator: text(testSelector('creator'))
 });

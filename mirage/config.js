@@ -1,5 +1,19 @@
 import Mirage from 'ember-cli-mirage';
 
+function authenticated(callback) {
+  return function(schema, request) {
+    let authHeader = request.requestHeaders.Authorization;
+    let apiKey = authHeader && authHeader.split(' ')[1];
+    let user = apiKey && schema.users.where({ apiKey }).models[0];
+
+    if (!user) {
+      return new Mirage.Response(401, { 'Content-Type': 'text/plain' }, '');
+    }
+
+    return callback.call(this, schema, request, user);
+  };
+}
+
 export default function() {
   this.post('/accounts', function({ users }) {
     let attrs = this.normalizedRequestAttrs();
@@ -26,6 +40,10 @@ export default function() {
   });
 
   this.get('/stories');
-  this.post('/stories');
   this.get('/stories/:id');
+  this.post('/stories', authenticated(function({ stories }, _, user) {
+    let attrs = Object.assign(this.normalizedRequestAttrs(), { user });
+
+    return stories.create(attrs);
+  }));
 }
