@@ -42,5 +42,8 @@
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "ember-cli-page-object": "^1.9.0"
+  }
 }
