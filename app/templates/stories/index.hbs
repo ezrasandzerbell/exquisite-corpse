@@ -1,1 +1,5 @@
 {{link-to "New Story" "stories.new" data-test-action="new-story"}}
+
+{{#each model as |story|}}
+  {{story-listing story=story data-test-story-id=story.id}}
+{{/each}}

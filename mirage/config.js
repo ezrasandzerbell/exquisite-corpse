@@ -25,6 +25,7 @@ export default function() {
     return this.serialize(user, 'session');
   });
 
+  this.get('/stories');
   this.post('/stories');
   this.get('/stories/:id');
 }
