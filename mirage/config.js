@@ -13,4 +13,15 @@ export default function() {
 
     return this.serialize(user, 'session');
   });
+
+  this.post('/sessions', function({ users }) {
+    let attrs = this.normalizedRequestAttrs();
+    let [user] = users.where({ username: attrs.username, password: attrs.password }).models;
+
+    if (!user) {
+      return new Mirage.Response(422, {}, { errors: [{ detail: 'Incorrect username or password' }] });
+    }
+
+    return this.serialize(user, 'session');
+  });
 }
