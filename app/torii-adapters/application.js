@@ -6,5 +6,8 @@ export default Ember.Object.extend({
       apiKey,
       currentUser: { id, username }
     });
+  },
+
+  close() {
   }
 });

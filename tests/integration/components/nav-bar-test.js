@@ -17,8 +17,12 @@ moduleForComponent('nav-bar', 'Integration | Component | nav bar', {
 });
 
 test('it renders the current username', function(assert) {
-  this.set('currentUser', { username: 'current-user' });
-  this.render(hbs`{{nav-bar currentUser=currentUser}}`);
+  this.setProperties({
+    currentUser: { username: 'current-user' },
+    signOut: () => {}
+  });
+
+  this.render(hbs`{{nav-bar currentUser=currentUser signOut=signOut}}`);
 
   assert.equal(component.currentUsername, 'current-user');
 });

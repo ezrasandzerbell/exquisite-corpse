@@ -2,4 +2,5 @@ Exquisite Corpse
 
 {{#if currentUser}}
   <span data-test-current-username>{{currentUser.username}}</span>
+  <button data-test-action="sign-out" {{action (action signOut)}}>Sign Out</button>
 {{/if}}
