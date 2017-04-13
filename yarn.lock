@@ -5314,6 +5314,15 @@ to-fast-properties@^1.0.0, to-fast-properties@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.2.tgz#f3f5c0c3ba7299a7ef99427e44633257ade43320"
 
+torii@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/torii/-/torii-0.8.2.tgz#60688b5ce0bc148dedf764df3c4c41f55da3f866"
+  dependencies:
+    broccoli-funnel "^1.0.1"
+    broccoli-merge-trees "^1.1.1"
+    broccoli-string-replace "^0.1.1"
+    ember-cli-babel "^5.1.3"
+
 tough-cookie@~2.3.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.2.tgz#f081f76e4c85720e6c37a5faced737150d84072a"

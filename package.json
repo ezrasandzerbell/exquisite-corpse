@@ -36,7 +36,8 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.13.0-beta.1",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "torii": "^0.8.2"
   },
   "engines": {
     "node": ">= 4"
