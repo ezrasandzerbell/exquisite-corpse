@@ -1,0 +1,9 @@
+{{#each errors as |error|}}
+  <div data-test-error>{{error}}</div>
+{{/each}}
+
+<form {{action (perform signUp) on="submit"}}>
+  <label>Username: {{input data-test-username value=username}}</label>
+  <label>Password: {{input data-test-password value=password type="password"}}</label>
+  <button data-test-action="sign-up" type="submit" disabled={{signUp.isRunning}}>Sign Up</button>
+</form>
