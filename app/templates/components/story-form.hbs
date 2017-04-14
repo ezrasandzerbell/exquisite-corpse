@@ -1,0 +1,7 @@
+<label for="new-story-title">Title</label>
+{{input data-test-title id="new-story-title" value=story.title input=(action (mut showTitleError) true)}}
+{{#if (and showTitleError (v-get this 'story.title' 'isInvalid'))}}
+  <span data-test-error>{{v-get this 'story.title' 'message'}}</span>
+{{/if}}
+
+<button data-test-action="create" type="submit" disabled={{or isInvalid saveTask.isRunning}}>Create</button>

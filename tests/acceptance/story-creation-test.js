@@ -17,3 +17,13 @@ test('successful story creation', async function(assert) {
   assert.equal(StoryPage.title, 'New Spooky Story');
   assert.equal(StoryPage.creator, 'author');
 });
+
+test('invalid story', async function(assert) {
+  createSession(this.application);
+
+  await NewStoryPage
+    .visit()
+    .title('');
+
+  assert.equal(NewStoryPage.errors().count, 1);
+});
