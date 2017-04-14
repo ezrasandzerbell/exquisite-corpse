@@ -1926,7 +1926,7 @@ ember-cli-app-version@^3.0.0:
     ember-cli-htmlbars "^1.0.0"
     git-repo-version "0.4.1"
 
-ember-cli-babel@^5.1.10, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.5, ember-cli-babel@^5.1.6, ember-cli-babel@^5.1.7:
+ember-cli-babel@^5.1.10, ember-cli-babel@^5.1.3, ember-cli-babel@^5.1.5, ember-cli-babel@^5.1.6, ember-cli-babel@^5.1.7, ember-cli-babel@^5.1.8:
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.2.4.tgz#5ce4f46b08ed6f6d21e878619fb689719d6e8e13"
   dependencies:
@@ -2277,6 +2277,19 @@ ember-concurrency@^0.8.1:
     ember-getowner-polyfill "^1.1.0"
     ember-maybe-import-regenerator "^0.1.5"
 
+ember-cp-validations@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/ember-cp-validations/-/ember-cp-validations-3.3.0.tgz#470525426769c8dce2d58ac6159d684d7c225d8e"
+  dependencies:
+    ember-cli-babel "^5.1.8"
+    ember-cli-version-checker "^1.2.0"
+    ember-getowner-polyfill "^1.2.0"
+    ember-require-module "^0.1.1"
+    ember-string-ishtmlsafe-polyfill "^1.1.0"
+    ember-validators "1.0.1"
+    exists-sync "0.0.4"
+    walk-sync "^0.3.1"
+
 ember-data@^2.13.0-beta.1:
   version "2.13.0-beta.4"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-2.13.0-beta.4.tgz#f9747fe9608283b2c27a5741631d555b78def231"
@@ -2318,7 +2331,7 @@ ember-factory-for-polyfill@^1.1.0:
     ember-cli-babel "^5.1.7"
     ember-cli-version-checker "^1.2.0"
 
-ember-getowner-polyfill@^1.1.0, ember-getowner-polyfill@^1.1.1:
+ember-getowner-polyfill@^1.1.0, ember-getowner-polyfill@^1.1.1, ember-getowner-polyfill@^1.2.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-1.2.2.tgz#cdab739e89cc8f25af0f78735422df1a61193e92"
   dependencies:
@@ -2362,6 +2375,12 @@ ember-qunit@^2.0.0-beta.1:
   resolved "https://registry.yarnpkg.com/ember-qunit/-/ember-qunit-2.1.2.tgz#ede8e56f098206c1d0834a592acefa0c47dc9ad7"
   dependencies:
     ember-test-helpers "^0.6.0-beta.1"
+
+ember-require-module@0.1.1, ember-require-module@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ember-require-module/-/ember-require-module-0.1.1.tgz#5a2130f691ad1578b1d236dd11196721fd5526b2"
+  dependencies:
+    ember-cli-babel "^5.1.7"
 
 ember-resolver@^4.0.0:
   version "4.1.0"
@@ -2413,6 +2432,13 @@ ember-source@^2.12.1:
     rsvp "^3.4.0"
     simple-dom "^0.3.0"
 
+ember-string-ishtmlsafe-polyfill@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ember-string-ishtmlsafe-polyfill/-/ember-string-ishtmlsafe-polyfill-1.1.0.tgz#ecde33419ff912b91dd8acf0640eb74b9758408e"
+  dependencies:
+    ember-cli-babel "^5.1.7"
+    ember-cli-version-checker "^1.2.0"
+
 ember-test-helpers@^0.6.0-beta.1:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/ember-test-helpers/-/ember-test-helpers-0.6.3.tgz#f864cdf6f4e75f3f8768d6537785b5ab6e82d907"
@@ -2452,6 +2478,13 @@ ember-try@^0.2.11:
     rsvp "^3.0.17"
     semver "^5.1.0"
     sync-exec "^0.6.2"
+
+ember-validators@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ember-validators/-/ember-validators-1.0.1.tgz#4fcc3c0274d3ef7b3f85ace7919b1f62e761dcab"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-require-module "0.1.1"
 
 encodeurl@~1.0.1:
   version "1.0.1"
