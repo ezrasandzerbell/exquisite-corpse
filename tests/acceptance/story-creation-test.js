@@ -4,7 +4,7 @@ import createSession from 'exquisite-corpse/tests/helpers/create-session';
 import NewStoryPage from 'exquisite-corpse/tests/pages/new-story';
 import StoryPage from 'exquisite-corpse/tests/pages/story';
 
-moduleForAcceptance('Acceptance | creating stories');
+moduleForAcceptance('Acceptance | story creation');
 
 test('successful story creation', async function(assert) {
   createSession(this.application, { username: 'author' });
