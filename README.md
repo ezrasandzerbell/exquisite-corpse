@@ -1,7 +1,11 @@
 # exquisite-corpse
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+The [Exquisite Corpse](http://en.wikipedia.org/wiki/Exquisite_corpse) is an exercise in which successive participants add on to a single body of work.
+
+Your exercise is to create a system where users contribute pieces to ongoing stories.  An authentication service has already been hooked up.
+
+* A user can contribute to an existing story
+* A user cannot contribute to an existing story if they were the last contributor to that story
 
 ## Prerequisites
 
@@ -15,37 +19,20 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
 * `cd exquisite-corpse`
 * `yarn`
 
 ## Running / Development
 
-* `ember serve`
+* `yarn run ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
-* `ember test`
-* `ember test --server`
+* `yarn run ember test`
+* `yarn run ember test --server`
 
-### Building
+## Further Reading / Random Info
 
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* [Mirage](http://www.ember-cli-mirage.com/) is used to mock out a backend server
+* [Torii](http://vestorly.github.io/torii/) provides authentication services
