@@ -1,0 +1,6 @@
+.c_stories {
+  &--author { display: block; flex: 0 0 auto; font-weight: 600; margin-left: .4em; }
+  &--item { background-color: rgba(#fff, .4); display: grid; grid-template-columns: auto 1fr; margin-bottom: 4px; padding: 12px 20px; }
+  &--header { margin-bottom: 4px; padding: 20px; }
+  &--title { display: block; grid-column: span 2; font-weight: 400; }
+}

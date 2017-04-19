@@ -1,4 +1,29 @@
-{{link-to "Back" "stories"}}
+{{link-to "« Back" "stories" class="btn--back"}}
 
-<div data-test-title>{{model.title}}</div>
-by <span data-test-creator>{{model.user.username}}</span>
+<ol class="c_story--list">
+  <li class="c_story--heading">
+    <h2 data-test-title class="c_story--title">
+      {{model.title}}
+    </h2>
+    <p class="c_story--author">by <span data-test-creator>{{model.user.username}}</span></p>
+  </li>
+  <li class="c_story--addition">
+    <strong class="c_story--addition_header">Some_User added:</strong>
+    <section class="c_story--addition_content">
+      <p>Lorem ipsum dolor sit amet, libero velit curabitur. Convallis vestibulum lacinia, molestie at. Vulputate maecenas nulla, mauris nunc interdum. Suspendisse at mauris, proin sit, at convallis. Nunc accumsan.</p>
+      <p>Eget mauris sed. Accumsan a, ipsum lorem, pellentesque odio. Nullam nibh. Vestibulum donec, cursus nec nulla, wisi aenean duis. Tempus justo, bibendum lectus, aenean a elit. Qui diam ut.</p>
+      <p>Ac donec, nec laoreet accumsan, rhoncus aliquet. Adipiscing in mi, sed sapien morbi, dolor tempus tempus. Convallis nulla arcu. Vitae hic, morbi eu. In vel id. Eget sed nibh, iaculis taciti porta, sed convallis.</p>
+      <p>Eu laoreet nunc, sem suscipit. Eros lacus, quis nulla donec, mattis lorem. Sed unde dignissimos, ligula pellentesque. Nostra nunc, non ultrices sed, laoreet sed. Eleifend feugiat, eget adipiscing vivamus.</p>
+    </section>
+  </li>
+</ol>
+<form class="c_story--form c_form">
+  <p class="c_form--error">You can't post consecutively</p>
+  <label for="new-story-text" class="c_form--label">
+    Add to the story:
+  </label>
+  <textarea id="new-story-text" class="c_form--input"></textarea>
+  <button type="submit" class="c_form--btn btn">
+    Create
+  </button>
+</form>

@@ -1,0 +1,15 @@
+// Meyer Reset 2.0 (Modified)
+* { border: 0; box-sizing: border-box; font-size: 100%; font: inherit; margin: 0; padding: 0; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote {
+  &:before, &:after { content: ''; content: none; }
+}
+q {
+  &:before, &:after { content: ''; content: none; }
+}
+table { border-collapse: collapse; border-spacing: 0; }
+b, strong { font-weight: 700; }
+em, i { font-style: italic; }

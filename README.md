@@ -36,3 +36,7 @@ You will need the following things properly installed on your computer.
 
 * [Mirage](http://www.ember-cli-mirage.com/) is used to mock out a backend server
 * [Torii](http://vestorly.github.io/torii/) provides authentication services
+
+## Licenses
+
+* "[Zombie](https://thenounproject.com/search/?q=zombie&i=221377)" icon by J Ray Rivera, from [the Noun Project](https://thenounproject.com/).

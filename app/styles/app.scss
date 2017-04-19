@@ -1,0 +1,19 @@
+// Reset and base styles
+@import 'components/reset';
+* { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body { background-color: #eee; color: #444; font: 16px/28px 'Open Sans', sans-serif; padding: 20px; }
+a, button { background-color: transparent;
+  &, * { cursor: pointer; }
+}
+a { color: #00aef0;
+  &:hover { color: #0298d1; }
+}
+
+// Small Components
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/stories';
+@import 'components/story';
+
+// Page Layout
+@import 'components/header';

@@ -7,6 +7,7 @@ const Validations = buildValidations({
 
 export default Ember.Component.extend(Validations, {
   tagName: 'form',
+  classNames: 'c_form',
   isInvalid: Ember.computed.not('validations.isValid'),
 
   submit(e) {

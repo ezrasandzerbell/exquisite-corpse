@@ -1,0 +1,8 @@
+.c_header { align-items: center; background-color: #fff; display: grid; grid-column-gap: 10px; grid-template-columns: auto 1fr auto; margin: -20px -20px 20px; padding: 20px;
+  &--btn { color: #00aef0; font-size: 12px; justify-self: end; line-height: 1em; text-decoration: underline; text-transform: uppercase;
+    &:hover { color: #0298d1; }
+  }
+  &--logo { display: block; grid-row-start: span 2; height: 40px; width: 40px; }
+  &--title { font-size: 36px; grid-row-start: span 2; font-weight: 200; line-height: 1em; }
+  &--user { font-weight: 600; justify-self: end; text-transform: uppercase; }
+}

@@ -1,7 +1,10 @@
-<label for="new-story-title">Title</label>
-{{input data-test-title id="new-story-title" value=story.title input=(action (mut showTitleError) true)}}
 {{#if (and showTitleError (v-get this 'story.title' 'isInvalid'))}}
-  <span data-test-error>{{v-get this 'story.title' 'message'}}</span>
+  <p data-test-error class="c_form--error">{{v-get this 'story.title' 'message'}}</p>
 {{/if}}
-
-<button data-test-action="create" type="submit" disabled={{or isInvalid saveTask.isRunning}}>Create</button>
+<p class="c_form--group">
+  <label for="new-story-title" class="c_form--label">Title</label>
+  {{input data-test-title id="new-story-title" value=story.title input=(action (mut showTitleError) true) class="c_form--input"}}
+</p>
+<button data-test-action="create" type="submit" disabled={{or isInvalid saveTask.isRunning}} class="c_form--btn btn">
+  Create
+</button>

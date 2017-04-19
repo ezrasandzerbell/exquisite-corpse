@@ -1,11 +1,17 @@
-{{#each errors as |error|}}
-  <div data-test-error>{{error}}</div>
-{{/each}}
-
-<form {{action (perform signIn) on="submit"}}>
-  <label>Username: {{input data-test-username value=username}}</label>
-  <label>Password: {{input data-test-password value=password type="password"}}</label>
-  <button data-test-action="sign-in" type="submit" disabled={{signIn.isRunning}}>Sign In</button>
+<form {{action (perform signIn) on="submit"}} class="c_form c_form--login">
+  {{#each errors as |error|}}
+    <p data-test-error class="c_form--error">{{error}}</p>
+  {{/each}}
+  <label class="c_form--group">
+    <strong class="c_form--label">Username:</strong>
+    {{input data-test-username value=username class="c_form--input"}}
+  </label>
+  <label class="c_form--group">
+    <strong class="c_form--label">Password:</strong>
+    {{input data-test-password value=password type="password" class="c_form--input"}}
+  </label>
+  <button data-test-action="sign-in" type="submit" disabled={{signIn.isRunning}} class="c_form--btn btn">Sign In</button>
 </form>
-
-Or {{link-to "create a new account" "sign-up"}}
+<p class="c_form--note">
+  or {{link-to "create a new account" "sign-up"}}
+</p>
