@@ -7,6 +7,8 @@ Your exercise is to create a system where users contribute pieces to ongoing sto
 * A user can contribute to an existing story
 * A user cannot contribute to an existing story if they were the last contributor to that story
 
+Inside the files you will find temporary markup for styling purposes. Feel free to move it around as you see fit. Your styles will not be judged--if you need new markup, feel free to make it as ugly as you wish.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
