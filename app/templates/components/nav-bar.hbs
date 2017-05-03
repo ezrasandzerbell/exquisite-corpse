@@ -9,7 +9,7 @@
 
   {{#if currentUser}}
     <span data-test-current-username class="c_header--user">
-      &ldquo;{{currentUser.username}}&rdquo;
+      {{currentUser.username}}
     </span>
     <button data-test-action="sign-out" {{action (action signOut)}} class="c_header--btn">
       Sign Out
