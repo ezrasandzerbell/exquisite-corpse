@@ -6,11 +6,16 @@ export default Ember.Route.extend({
     return this.get('store').find('story', storyId);
   },
 
+  segments() {
+    return this.get('store').findAll('segment');
+  },
+
   actions: {
     error(error) {
       if (isNotFoundError(error)) {
         this.transitionTo('stories');
       }
     }
+
   }
 });
