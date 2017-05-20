@@ -1,0 +1,10 @@
+<form class="c_story--form c_form">
+  <p class="c_form--error">You can't post consecutively</p>
+  <label for="new-story-text" class="c_form--label">
+    Add to the story:
+  </label>
+  {{input data-test-body id="new-story-text" value=bodyInput class="c_form--input"}}
+  <button {{action (action addSegment)}} type="submit" class="c_form--btn btn">
+    Add to Corpse
+  </button>
+</form>

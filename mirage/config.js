@@ -46,4 +46,8 @@ export default function() {
 
     return stories.create(attrs);
   }));
+  this.post('/segments', authenticated(function({ segments }, _, user) {
+    let attrs = Object.assign(this.normalizedRequestAttrs(), { user });
+    return segments.create(attrs);
+  }));
 }

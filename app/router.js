@@ -14,6 +14,8 @@ Router.map(function() {
     this.authenticatedRoute('new');
     this.authenticatedRoute('show', { path: '/:story_id' });
   });
+
+  this.authenticatedRoute('segments', { path: '/segments'})
 });
 
 export default Router;

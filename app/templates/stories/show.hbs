@@ -16,18 +16,20 @@
       <p>Eu laoreet nunc, sem suscipit. Eros lacus, quis nulla donec, mattis lorem. Sed unde dignissimos, ligula pellentesque. Nostra nunc, non ultrices sed, laoreet sed. Eleifend feugiat, eget adipiscing vivamus.</p>
     </section>
   </li>
-  {{#each segments as |segment|}}
-    {{story-segment segment=segment data-test-segment-id=segment.id}}
+  {{#each model.segments as |segment|}}
+    {{story-segment segment=segment}}
   {{/each}}
 </ol>
+
 <form class="c_story--form c_form">
   <p class="c_form--error">You can't post consecutively</p>
   <label for="new-story-text" class="c_form--label">
     Add to the story:
   </label>
-  <textarea id="new-story-text" class="c_form--input"></textarea>
-  <button {{action (action addon)}} type="submit" class="c_form--btn btn">
+  {{input data-test-body id="new-story-text" value=bodyInput class="c_form--input"}}
+  <button {{action (action addSegment)}} type="submit" class="c_form--btn btn">
     Add to Corpse
   </button>
-
 </form>
+
+<!-- {{segment-form story=model}} -->

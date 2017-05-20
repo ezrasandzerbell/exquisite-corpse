@@ -10,6 +10,10 @@ export default Ember.Route.extend({
     return this.get('store').findAll('segment');
   },
 
+  segment() {
+    return this.get('store').createRecord('segment');
+  },
+
   actions: {
     error(error) {
       if (isNotFoundError(error)) {
