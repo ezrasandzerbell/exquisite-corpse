@@ -50,4 +50,5 @@ export default function() {
     let attrs = Object.assign(this.normalizedRequestAttrs(), { user });
     return segments.create(attrs);
   }));
+  this.get('/segments');
 }

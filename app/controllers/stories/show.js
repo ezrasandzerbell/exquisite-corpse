@@ -4,27 +4,33 @@ import { task } from 'ember-concurrency';
 
 export default Ember.Controller.extend( {
   bodyInput: null,
+  actionPerformed: false,
 
   addSegment: task(function * () {
-    // console.log(this.bodyInput);
-    // console.log(this.model.id);
 
-    // The currentUser exists on the session but I
-    // can't get it to pass in as the user on the segment model
-    // let thisUserName = this.get('store').find('user', this.session.content.currentUser.id);
-    //
-    let session = this.session.content.currentUser.username;
-    console.log("its current", session);
+    let user = this.session.content.currentUser.username;
+
     let segment = this.get('store').createRecord('segment', {
-      user: session,
+      user: user,
       body: this.bodyInput,
       story: this.model
     });
-    // console.log('currentUser', this.session.content.currentUser);
-    // console.log(segment.user.username);
+    console.log("model", this.model.get('store').findAll('segment'));
     segment.save();
-    // console.log(segment.user.username);
+
     yield segment;
+
+    // if (user == ) {
+    //   let segment = this.get('store').createRecord('segment', {
+    //     user: user,
+    //     body: this.bodyInput,
+    //     story: this.model
+    //   });
+    //   segment.save();
+    //   yield segment;
+    // } else {
+    //   alert("You cannot post consecutively")
+    // }
 
     this.transitionToRoute('stories.show', this.model);
   })
